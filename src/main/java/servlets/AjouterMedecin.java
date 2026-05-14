@@ -21,10 +21,10 @@ public class AjouterMedecin extends HttpServlet{
 
         request.setCharacterEncoding("UTF-8");
 
-        String nom = request.getParameter("nom");
-        String inpe = request.getParameter("inpe");
-        String service = request.getParameter("service");
-        String grade = request.getParameter("grade");
+        String nom        = request.getParameter("nom");
+        String inpe       = request.getParameter("inpe");
+        String service    = request.getParameter("service");
+        String grade      = request.getParameter("grade");
         String specialite = request.getParameter("specialite");
 
         boolean chirurgien = request.getParameter("chirurgien") != null;

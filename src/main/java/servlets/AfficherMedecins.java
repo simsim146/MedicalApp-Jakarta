@@ -88,7 +88,7 @@ public class AfficherMedecins extends HttpServlet{
                             %s
                         </table>
                         <form action="ajouter_medecin.html" method="get">
-                            <button type = "sunmit">Ajouter un medecin</button>
+                            <button type = "submit">Ajouter un medecin</button>
                         </form>
                     </body>
                 </html>                    
