@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Ajouter un médecin</title>
+</head>
+<body>
+
+<h2>Ajouter un médecin spécialiste</h2>
+
+<form action="AjouterMedecin" method="get">
+
+    <label>Nom :</label><br>
+    <input type="text" name="nom" required><br><br>
+
+    <label>INPE :</label><br>
+    <input type="text" name="inpe" required><br><br>
+
+    <label>Service :</label><br>
+    <input type="text" name="service" required><br><br>
+
+    <label>Grade :</label><br>
+    <input type="text" name="grade" required><br><br>
+
+    <label>Spécialité :</label><br>
+    <select name="specialite" required>
+        <option value="Generaliste" selected>Généraliste</option>
+        <option value="Cardiologue">Cardiologue</option>
+        <option value="Dermatologue">Dermatologue</option>
+        <option value="Pediatre">Pédiatre</option>
+        <option value="Radiologue">Radiologue</option>
+    </select>
+    <br><br>
+
+    <label>
+        <input type="checkbox" name="chirurgien" value="true">
+        Chirurgien
+    </label>
+
+    <br><br>
+
+    <button type="submit">Ajouter</button>
+    <button type="reset">Annuler</button>
+
+</form>
+
+</body>
+</html>
