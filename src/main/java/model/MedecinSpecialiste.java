@@ -1,5 +1,8 @@
 package model;
 
+import jakarta.persistence.Entity;
+
+@Entity
 public class MedecinSpecialiste extends Medecin {
     private String specialite;
     private boolean chirurgien;

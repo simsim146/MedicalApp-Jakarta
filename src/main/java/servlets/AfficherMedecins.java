@@ -21,7 +21,7 @@ public class AfficherMedecins extends HttpServlet{
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
         throws IOException{
 
-        List<Medecin> medecins = medecinService.Lister();
+        List<Medecin> medecins = medecinService.lister();
         String lignes = "";
         if (medecins!=null){
 

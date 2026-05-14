@@ -1,8 +1,15 @@
 package model;
 
-import java.io.Serializable;
+import jakarta.persistence.*;
 
+import java.io.Serializable;
+@Entity
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 abstract public class Medecin implements Serializable {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
     private String nom;
     private String INPE;
     private String service;
