@@ -1,12 +1,19 @@
 package model;
 
-import java.io.Serializable;
+import jakarta.persistence.*;
 
+import java.io.Serializable;
+import java.util.ArrayList;
+
+@Entity
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 public class Patient implements Serializable {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
-    public static int nb=0;
-    private int id;
+
     private String nom;
     private int age;
     private float poids;
@@ -14,6 +21,12 @@ public class Patient implements Serializable {
     private int pressionSys;
     private int pressionDia;
     private boolean diabetique;
+
+    //it do smtg important, with consultation
+    @OneToMany(mappedBy = "patient",
+    cascade = CascadeType.ALL,
+            orphanRemoval = true)
+    private ArrayList<Consultation> consultations = new ArrayList<Consultation>();
 
     public Patient(String nom, int age, float poids, float taille, int pressionSys, int pressionDia, boolean diabeeque) {
         this.nom = nom;
@@ -23,7 +36,6 @@ public class Patient implements Serializable {
         this.pressionSys = pressionSys;
         this.pressionDia = pressionDia;
         this.diabetique = diabetique;
-        id=++nb;
     }
 
     public Patient(Patient patient) {
@@ -34,7 +46,7 @@ public class Patient implements Serializable {
         this.pressionSys = patient.pressionSys;
         this.pressionDia = patient.pressionDia;
         this.diabetique = patient.diabetique;
-        id= patient.id;
+
     }
    /* public String toString() {
         return "Model.Patient{" +
