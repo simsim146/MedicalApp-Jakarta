@@ -33,12 +33,12 @@ public class AfficherMedecins extends HttpServlet{
                     medecin).isChirurgien() ? "oui" : "non";
                     lignes += """
                                 <tr>
-                                    <td>%s<td>
-                                    <td>%s<td>
-                                    <td>%s<td>
-                                    <td>%s<td>
-                                    <td>%s<td>
-                                    <td>%s<td>
+                                    <td>%s</td>
+                                    <td>%s</td>
+                                    <td>%s</td>
+                                    <td>%s</td>
+                                    <td>%s</td>
+                                    <td>%s</td>
                                 </tr>
                             """.formatted(
                             medecin.getNom(),
